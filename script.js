@@ -5,7 +5,7 @@ const description = document.getElementById('description');
 description.textContent = 'This activity helps you practice DOM manipulation using JavaScript.';
 
 const itemList = document.getElementById('item-list');
-const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+
 
 const addItemButton = document.getElementById('add-item');
 
@@ -19,7 +19,8 @@ const clearListButton = document.getElementById('clear-items');
 addItemButton.addEventListener('click', () => {
     if (itemIndex < items.length) {
         const listItem = document.createElement('li');
-        listItem.textContent = items[itemIndex];
+        const currentCount = itemList.children.length + 1;
+        listItem.textContent = `Item ${currentCount}: ${items[itemIndex]}`;
         itemList.appendChild(listItem);
         itemIndex++;
     }
