@@ -10,7 +10,6 @@ const itemList = document.getElementById('item-list');
 const addItemButton = document.getElementById('add-item');
 
 const modifyItemButton = document.getElementById('modify-item');
-let itemIndex = 0;
 
 const removeItemButton = document.getElementById('remove-item');
 
@@ -44,5 +43,4 @@ removeItemButton.addEventListener('click', () => {
 
 clearListButton.addEventListener('click', () => {
     itemList.innerHTML = '';
-    itemIndex = 0; // Reset index when list is cleared
 });     
