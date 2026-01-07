@@ -17,13 +17,12 @@ const removeItemButton = document.getElementById('remove-item');
 const clearListButton = document.getElementById('clear-items');
 
 addItemButton.addEventListener('click', () => {
-    if (itemIndex < items.length) {
+    
         const listItem = document.createElement('li');
         const currentCount = itemList.children.length + 1;
-        listItem.textContent = `Item ${currentCount}: ${items[itemIndex]}`;
+        listItem.textContent = `Item ${currentCount}`;
         itemList.appendChild(listItem);
-        itemIndex++;
-    }
+    
 });
 
 modifyItemButton.addEventListener('click', () => {
